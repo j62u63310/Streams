@@ -1,0 +1,110 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    position: absolute;
+    top: 10%; /* 调整标题位置 */
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-10deg);
+    color: purple;
+    font-size: 100px; /* 调整字体大小 */
+    padding: 20px 30px; /* 调整标题内边距 */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-family: 'Garamond', sans-serif; /* 使用Montserrat字體 */
+    text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black
+    , 0 0 50px purple, 0 0 60px purple, 0 0 70px purple; /* 调整文字阴影效果 */
+}
+
+h1:hover {
+    animation: flicker 0.5s infinite alternate;
+    transform: translate(-50%, -50%) skew(10deg);
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.search-container {
+    position: absolute;
+    top: calc(20% + 120px); /* 調整搜尋欄位置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+input[type="text"] {
+    padding: 12px; /* 設定搜尋欄大小 */
+    border-top-left-radius: 10px; /* 左上角圓角 */
+    border-bottom-left-radius: 10px; /* 左下角圓角 */
+    border: 2px solid #ccc;
+    font-size: 16px;
+    width: 250px;
+    background-color: #222; /* 修改背景色 */
+    color: #ddd; /* 修改字體顏色 */
+    transition: all 0.3s ease; /* 添加過渡效果 */
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="text"]:focus,
+button:focus {
+    outline: none;
+    border-color: purple;
+    box-shadow: 0 0 10px purple;
+}
+
+button:hover,
+input[type="text"]:focus + button {
+    background-color: #6a1b9a;
+}
+
+button {
+    padding: 12px; /* 設定按鈕大小 */
+    border-top-right-radius: 10px; /* 右上角圓角 */
+    border-bottom-right-radius: 10px; /* 右下角圓角 */
+    background-color: purple;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+button:hover {
+    background-color: #6a1b9a; /* 鼠標懸停時的背景色 */
+}
+
+.streams {
+    list-style-type: none;
+    color: white;
+    margin-top: 20px; /* 調整上邊距 */
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: calc(20% + 150px); /* 讓 .streams 元素距離頂部更遠 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.streams img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+

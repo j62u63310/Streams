@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../Style/Home.css"
 import axios from 'axios';
 
 function Home() {
@@ -38,13 +39,15 @@ function Home() {
 
     return (
         <div>
-            <h1>Twitch Streams</h1>
-            <label>
-                直播主：
-                <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)}/>
-            </label>
-            <button onClick={fetchData}>搜尋實況主</button>
-            <ul>
+            <h1>Twitch 實況主</h1>
+            <div className="search-container">
+                <label>
+                    <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)}
+                           placeholder="輸入Twtich使用者名稱"/>
+                </label>
+                <button onClick={fetchData}>搜尋</button>
+            </div>
+            <ul className="streams">
                 {userData.map((data, index) => (
                     <li key={index}>
                         <img src={data.profileImageUrl} alt="Profile"/>
