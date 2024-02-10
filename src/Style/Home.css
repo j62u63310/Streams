@@ -4,6 +4,23 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    background-image: url('../Image/background.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; /* 將背景圖片置中 */
+    background-attachment: fixed; /* 將背景圖片固定 */
+}
+
+.window{
+    width: 1000px;
+    height: 800px;
+    border: 2px solid purple; /* 邊框寬度和顏色 */
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 

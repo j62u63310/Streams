@@ -39,6 +39,7 @@ function Home() {
 
     return (
         <div>
+            <div className= "window"></div>
             <h1>Twitch 實況主</h1>
             <div className="search-container">
                 <label>
