@@ -1,155 +1,157 @@
-body {
-    background-color: #000;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background-image: url('../Image/background.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center ; /* 將背景圖片置中 */
-    background-attachment: fixed; /* 將背景圖片固定 */
-}
-
-.window{
-    width: 1000px;
-    height: 800px;
-    border: 2px solid purple; /* 邊框寬度和顏色 */
-    background-color: rgba(0, 0, 0, 0.7);
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-h1 {
-    position: absolute;
-    top: 10%; /* 调整标题位置 */
-    left: 50%;
-    transform: translate(-50%, -50%) skew(-10deg);
-    color: purple;
-    font-size: 100px; /* 调整字体大小 */
-    padding: 20px 30px; /* 调整标题内边距 */
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    font-family: 'Garamond', sans-serif; /* 使用Montserrat字體 */
-    text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black
-    , 0 0 50px purple, 0 0 60px purple, 0 0 70px purple; /* 调整文字阴影效果 */
-}
-
-h1:hover {
-    animation: flicker 0.5s infinite alternate;
-    transform: translate(-50%, -50%) skew(10deg);
-}
-
-@keyframes flicker {
-    0% {
-        opacity: 1;
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-image: url('../Image/background.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center ; /* 將背景圖片置中 */
+        background-attachment: fixed; /* 將背景圖片固定 */
     }
-    100% {
-        opacity: 0.5;
+
+    .window{
+        width: 1000px;
+        height: 800px;
+        border: 2px solid purple; /* 邊框寬度和顏色 */
+        background-color: rgba(0, 0, 0, 0.7);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-}
-
-.search-container {
-    position: absolute;
-    top: calc(20% + 120px); /* 調整搜尋欄位置 */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center; /* 垂直居中 */
-}
-
-input[type="text"] {
-    padding: 12px; /* 設定搜尋欄大小 */
-    border-top-left-radius: 10px; /* 左上角圓角 */
-    border-bottom-left-radius: 10px; /* 左下角圓角 */
-    border: 2px solid #ccc;
-    font-size: 16px;
-    width: 250px;
-    background-color: #222; /* 修改背景色 */
-    color: #ddd; /* 修改字體顏色 */
-    transition: all 0.3s ease; /* 添加過渡效果 */
-}
-
-input[type="text"]:focus,
-button:focus {
-    outline: none;
-    border-color: purple;
-    box-shadow: 0 0 10px purple;
-}
-
-button {
-    padding: 12px; /* 設定按鈕大小 */
-    border-top-right-radius: 10px; /* 右上角圓角 */
-    border-bottom-right-radius: 10px; /* 右下角圓角 */
-    background-color: purple;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* 添加過渡效果 */
-}
-
-button:hover {
-    background-color: #6a1b9a; /* 鼠標懸停時的背景色 */
-}
-
-.data{
-    list-style-type: none;
-    color: white;
-    position: absolute;
-    top:-10px;
-    left:100px;
-}
 
 
+    h1 {
+        position: absolute;
+        top: 10%; /* 调整标题位置 */
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-10deg);
+        color: purple;
+        font-size: 100px; /* 调整字体大小 */
+        padding: 20px 30px; /* 调整标题内边距 */
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        font-family: 'Garamond', sans-serif; /* 使用Montserrat字體 */
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black
+        , 0 0 50px purple, 0 0 60px purple, 0 0 70px purple; /* 调整文字阴影效果 */
+    }
 
-.card {
-    width: 450px;
-    height: 500px;
-    border: 2px solid bisque;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top : 340px;
-    left : 725px;
-}
+    h1:hover {
+        animation: flicker 0.5s infinite alternate;
+        transform: translate(-50%, -50%) skew(10deg);
+    }
 
-.card.live {
-    border: 2px solid orangered; /* 開台時的外框顏色 */
-}
+    @keyframes flicker {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
 
-.card.offline {
-    border: 2px solid bisque; /* 離線時的外框顏色 */
-}
+    .search-container {
+        position: absolute;
+        top: calc(20% + 120px); /* 調整搜尋欄位置 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center; /* 垂直居中 */
+    }
 
-.user-info {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
+    input[type="text"] {
+        padding: 12px; /* 設定搜尋欄大小 */
+        border-top-left-radius: 10px; /* 左上角圓角 */
+        border-bottom-left-radius: 10px; /* 左下角圓角 */
+        border: 2px solid #ccc;
+        font-size: 16px;
+        width: 250px;
+        background-color: #222; /* 修改背景色 */
+        color: #ddd; /* 修改字體顏色 */
+        transition: all 0.3s ease; /* 添加過渡效果 */
+    }
 
-.card-info{
-    width: 427px;
-    height: 240px;
-    position: absolute;
-    top: 250px;
-    left: 10px;
-    border-color: purple;
-    box-shadow: 0 0 10px purple;
-}
+    input[type="text"]:focus,
+    button:focus {
+        outline: none;
+        border-color: purple;
+        box-shadow: 0 0 10px purple;
+    }
 
-.card-info.live {
-    border-color: orangered;
-    box-shadow: 0 0 10px orangered;
-}
+    button {
+        padding: 12px; /* 設定按鈕大小 */
+        border-top-right-radius: 10px; /* 右上角圓角 */
+        border-bottom-right-radius: 10px; /* 右下角圓角 */
+        background-color: purple;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* 添加過渡效果 */
+    }
 
-.card-info.offline {
-    border-color: bisque;
-    box-shadow: 0 0 10px bisque;
+    button:hover {
+        background-color: #6a1b9a; /* 鼠標懸停時的背景色 */
+    }
+
+    .data{
+        list-style-type: none;
+        color: white;
+        position: absolute;
+        top:-10px;
+        left:100px;
+    }
+
+
+
+    .card {
+        width: 450px;
+        height: 500px;
+        border: 2px solid bisque;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top : 340px;
+        left : 725px;
+    }
+
+    .card.live {
+        border: 2px solid orangered; /* 開台時的外框顏色 */
+    }
+
+    .card.offline {
+        border: 2px solid bisque; /* 離線時的外框顏色 */
+    }
+
+    .user-info {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .card-info{
+        width: 427px;
+        height: 240px;
+        position: absolute;
+        top: 250px;
+        left: 10px;
+        border-color: purple;
+        box-shadow: 0 0 10px purple;
+    }
+
+    .card-info.live {
+        border-color: orangered;
+        box-shadow: 0 0 10px orangered;
+    }
+
+    .card-info.offline {
+        border-color: bisque;
+        box-shadow: 0 0 10px bisque;
+    }
 }
