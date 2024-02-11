@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import "../Style/Home.css"
+import "../Style/HomeComputer.css"
+import "../Style/HomePhone.css"
 import axios from 'axios';
 
 function Home() {
