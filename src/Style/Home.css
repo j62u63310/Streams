@@ -7,7 +7,7 @@ body {
     background-image: url('../Image/background.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center; /* 將背景圖片置中 */
+    background-position: center ; /* 將背景圖片置中 */
     background-attachment: fixed; /* 將背景圖片固定 */
 }
 
@@ -74,20 +74,11 @@ input[type="text"] {
     transition: all 0.3s ease; /* 添加過渡效果 */
 }
 
-input[type="text"]::placeholder {
-    color: #999;
-}
-
 input[type="text"]:focus,
 button:focus {
     outline: none;
     border-color: purple;
     box-shadow: 0 0 10px purple;
-}
-
-button:hover,
-input[type="text"]:focus + button {
-    background-color: #6a1b9a;
 }
 
 button {
@@ -106,22 +97,59 @@ button:hover {
     background-color: #6a1b9a; /* 鼠標懸停時的背景色 */
 }
 
-.streams {
+.data{
     list-style-type: none;
     color: white;
-    margin-top: 20px; /* 調整上邊距 */
-    display: inline-block;
-    vertical-align: top;
     position: absolute;
-    top: calc(20% + 150px); /* 讓 .streams 元素距離頂部更遠 */
-    left: 50%;
-    transform: translateX(-50%);
+    top:-10px;
+    left:100px;
 }
 
-.streams img {
-    width: 100px;
-    height: 100px;
+
+
+.card {
+    width: 450px;
+    height: 500px;
+    border: 2px solid bisque;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top : 340px;
+    left : 725px;
+}
+
+.card.live {
+    border: 2px solid orangered; /* 開台時的外框顏色 */
+}
+
+.card.offline {
+    border: 2px solid bisque; /* 離線時的外框顏色 */
+}
+
+.user-info {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
+.card-info{
+    width: 427px;
+    height: 240px;
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    border-color: purple;
+    box-shadow: 0 0 10px purple;
+}
+
+.card-info.live {
+    border-color: orangered;
+    box-shadow: 0 0 10px orangered;
+}
+
+.card-info.offline {
+    border-color: bisque;
+    box-shadow: 0 0 10px bisque;
+}
